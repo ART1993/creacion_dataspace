@@ -4,7 +4,7 @@ import uuid
 import time
 from datetime import datetime, timezone
 
-from sensor_sim.simple_data_forest import setup_forest, create_entity
+from simple_data_forest import setup_forest, create_entity
 
 def create_observation(observed_property, value, unit_code):
     obs_id = f"urn:ngsi-ld:Observation:{uuid.uuid4()}"
