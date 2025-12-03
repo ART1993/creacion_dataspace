@@ -44,6 +44,16 @@ services:
     depends_on:
       - orionld_orga
 
+  connector-demo:
+    build: ./connector_demo
+    container_name: connector-demo
+    environment:
+      - BROKER_ORGA=http://orionld_orga:1026/ngsi-ld/v1
+      - BROKER_ORGB=http://orionld_orgb:1026/ngsi-ld/v1
+    depends_on:
+      - orionld_orga
+      - orionld_orgb
+
 networks:
   default:
     name: forest-dataspace-net
