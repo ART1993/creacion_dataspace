@@ -11,10 +11,6 @@ HEADERS = {
     "Link": '<https://example.org/contexts/forest.jsonld>;'
     'rel="http://www.w3.org/ns/json-ld#context";'
     'type="application/ld+json"'
-    #'"Content-Type": "application/ld+json"'
-    ,"Link": '<https://example.org/contexts/forest.jsonld>; '
-            'rel="http://www.w3.org/ns/json-ld#context"; '
-            'type="application/ld+json"'
 }
 
 def create_entity(entity):
