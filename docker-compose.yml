@@ -1,16 +1,22 @@
 services:
   mongo:
-    image: mongo:6
-    container_name: mongo
+    image: mongo:3.6
+    hostname: mongo-db
+    container_name: db-mongo
     ports:
       - "27017:27017"
+    networks:
+      - default
+    command: --nojournal
+    volumes:
+      - mongo-db:/data
 
   orionld_orga:
     image: fiware/orion-ld:latest
     container_name: orionld_orga
     depends_on:
-      - mongo
-    command: -dbhost mongo -logLevel DEBUG
+      - mongo-db
+    command: -dbhost mongo-db -logLevel DEBUG
     ports:
       - "1026:1026"
       
@@ -18,8 +24,8 @@ services:
     image: fiware/orion-ld:latest
     container_name: orionld_orgb
     depends_on:
-      - mongo
-    command: -dbhost mongo -logLevel DEBUG
+      - mongo-db
+    command: -dbhost mongo-db -logLevel DEBUG
     ports:
       - "1030:1026"
 
@@ -53,6 +59,9 @@ services:
     depends_on:
       - orionld_orga
       - orionld_orgb
+
+volumes:
+  mongo-db: ~
 
 networks:
   default:
