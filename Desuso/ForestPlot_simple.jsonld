@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.org/forest-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:ForestPlot:plot-001",
+  "type": "ForestPlot_simple",
+  "name": {
+    "type": "Property",
+    "value": "Parcela 001 - Monte Alto"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+          [-3.702, 40.416]
+      ]
+    }
+  }
+}

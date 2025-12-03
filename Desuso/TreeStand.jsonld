@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.org/forest-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:TreeStand:stand-001",
+  "type": "TreeStand",
+  "name": {
+    "type": "Property",
+    "value": "Rodal 1 - Pinar denso"
+  },
+  "plotRef": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:ForestPlot:plot-001"
+  },
+  "dominantSpecies": {
+    "type": "Property",
+    "value": "Pinus pinaster"
+  },
+  "meanAge": {
+    "type": "Property",
+    "value": 35,
+    "unitCode": "ANN"
+  },
+  "treeDensity": {
+    "type": "Property",
+    "value": 1200,
+    "unitCode": "H87"
+  },
+  "basalArea": {
+    "type": "Property",
+    "value": 24.5,
+    "unitCode": "MTK"
+  },
+  "meanHeight": {
+    "type": "Property",
+    "value": 15.2,
+    "unitCode": "MTR"
+  }
+}

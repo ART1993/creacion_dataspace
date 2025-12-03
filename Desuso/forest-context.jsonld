@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "ForestPlot": "https://example.org/forest#ForestPlot",
+    "TreeStand": "https://example.org/forest#TreeStand",
+    "GrazingAnimal": "https://example.org/forest#GrazingAnimal",
+    "FungiPatch": "https://example.org/forest#FungiPatch",
+    "SensorDevice": "https://example.org/forest#SensorDevice",
+    "FireRiskZone": "https://example.org/forest#FireRiskZone",
+    "Observation": "https://example.org/forest#Observation",
+
+    "name": "https://schema.org/name",
+    "description": "https://schema.org/description",
+
+    "area": "https://example.org/forest#area",
+    "dominantSpecies": "https://example.org/forest#dominantSpecies",
+    "secondarySpecies": "https://example.org/forest#secondarySpecies",
+    "canopyCover": "https://example.org/forest#canopyCover",
+    "fuelLoadFine": "https://example.org/forest#fuelLoadFine",
+    "fuelLoadCoarse": "https://example.org/forest#fuelLoadCoarse",
+    "soilMoistureIndex": "https://example.org/forest#soilMoistureIndex",
+    "managementCategory": "https://example.org/forest#managementCategory",
+
+    "species": "https://example.org/forest#species",
+    "animalType": "https://example.org/forest#animalType",
+    "owner": "https://example.org/forest#owner",
+    "speed": "https://example.org/forest#speed",
+    "activity": "https://example.org/forest#activity",
+    "healthStatus": "https://example.org/forest#healthStatus",
+
+    "fruitingProbability": "https://example.org/forest#fruitingProbability",
+    "observerType": "https://example.org/forest#observerType",
+
+    "deviceModel": "https://example.org/forest#deviceModel",
+    "controlledProperty": "https://example.org/forest#controlledProperty",
+    "batteryLevel": "https://example.org/forest#batteryLevel",
+    "communicationProtocol": "https://example.org/forest#communicationProtocol",
+    "status": "https://example.org/forest#status",
+
+    "riskIndexNow": "https://example.org/forest#riskIndexNow",
+    "riskIndex1h": "https://example.org/forest#riskIndex1h",
+    "riskIndex24h": "https://example.org/forest#riskIndex24h",
+    "riskCategory": "https://example.org/forest#riskCategory",
+    "dataSources": "https://example.org/forest#dataSources",
+
+    "observedProperty": "https://example.org/forest#observedProperty",
+    "result": "https://example.org/forest#result",
+    "phenomenonTime": "https://example.org/forest#phenomenonTime",
+    "resultTime": "https://example.org/forest#resultTime",
+
+    "hasTreeStand": {
+      "@id": "https://example.org/forest#hasTreeStand",
+      "@type": "@id"
+    },
+    "hasSensor": {
+      "@id": "https://example.org/forest#hasSensor",
+      "@type": "@id"
+    },
+    "plotRef": {
+      "@id": "https://example.org/forest#plotRef",
+      "@type": "@id"
+    },
+    "locatedIn": {
+      "@id": "https://example.org/forest#locatedIn",
+      "@type": "@id"
+    },
+    "refPlot": {
+      "@id": "https://example.org/forest#refPlot",
+      "@type": "@id"
+    },
+    "overlapsPlot": {
+      "@id": "https://example.org/forest#overlapsPlot",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "https://example.org/forest#madeBySensor",
+      "@type": "@id"
+    },
+    "observedFeatureOfInterest": {
+      "@id": "https://example.org/forest#observedFeatureOfInterest",
+      "@type": "@id"
+    },
+
+    "location": "http://uri.etsi.org/ngsi-ld/location",
+    "unitCode": "http://uri.etsi.org/ngsi-ld/unitCode"
+  }
+}

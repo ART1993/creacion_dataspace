@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.org/forest-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:FungiPatch:patch-001",
+  "type": "FungiPatch",
+  "name": {
+    "type": "Property",
+    "value": "Boletus – Ladera norte"
+  },
+  "species": {
+    "type": "Property",
+    "value": "Boletus edulis"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-3.7025, 40.4162],
+          [-3.7022, 40.4162],
+          [-3.7022, 40.4165],
+          [-3.7025, 40.4165],
+          [-3.7025, 40.4162]
+        ]
+      ]
+    }
+  },
+  "fruitingProbability": {
+    "type": "Property",
+    "value": 0.72
+  },
+  "lastObservation": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2025-11-29T09:15:00Z"
+    }
+  },
+  "locatedIn": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:ForestPlot:plot-001"
+  },
+  "observerType": {
+    "type": "Property",
+    "value": "citizen-science"  
+  }
+}

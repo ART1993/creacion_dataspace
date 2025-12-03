@@ -1,0 +1,49 @@
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+  orionld_orga:
+    image: fiware/orion-ld:latest
+    container_name: orionld_orga
+    depends_on:
+      - mongo
+    command: -dbhost mongo -logLevel DEBUG
+    ports:
+      - "1026:1026"
+      
+  orionld_orgb:
+    image: fiware/orion-ld:latest
+    container_name: orionld_orgb
+    depends_on:
+      - mongo
+    command: -dbhost mongo -logLevel DEBUG
+    ports:
+      - "1030:1026"
+
+  sensor-sim:
+    build: ./sensor_sim
+    container_name: sensor-sim
+    environment:
+      - BROKER_URL=http://orionld_orga:1026/ngsi-ld/v1
+    depends_on:
+      - orionld_orga
+
+  jupyter:
+    image: jupyter/minimal-notebook
+    container_name: forest-notebook
+    environment:
+      # Para no estar copiando tokens largos de Jupyter
+      - JUPYTER_TOKEN=forest
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    ports:
+      - "8888:8888"
+    depends_on:
+      - orionld_orga
+
+networks:
+  default:
+    name: forest-dataspace-net

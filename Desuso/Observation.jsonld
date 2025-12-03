@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.org/forest-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:Observation:obs-0001",
+  "type": "Observation",
+  "observedProperty": {
+    "type": "Property",
+    "value": "soilMoisture"
+  },
+  "result": {
+    "type": "Property",
+    "value": 0.27
+  },
+  "unitCode": {
+    "type": "Property",
+    "value": "C62"
+  },
+  "phenomenonTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2025-11-30T12:25:00Z"
+    }
+  },
+  "resultTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2025-11-30T12:25:05Z"
+    }
+  },
+  "madeBySensor": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:SensorDevice:sensor-002"
+  },
+  "observedFeatureOfInterest": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:ForestPlot:plot-001"
+  }
+}

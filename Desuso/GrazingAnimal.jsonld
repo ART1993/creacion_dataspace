@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://example.org/forest-context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:GrazingAnimal:cow-001",
+  "type": "GrazingAnimal",
+  "name": {
+    "type": "Property",
+    "value": "Vaca 001"
+  },
+  "species": {
+    "type": "Property",
+    "value": "Bos taurus"
+  },
+  "animalType": {
+    "type": "Property",
+    "value": "cattle"
+  },
+  "owner": {
+    "type": "Property",
+    "value": "Cooperativa Ganadera Sierra Norte"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [-3.7015, 40.4165]
+    }
+  },
+  "speed": {
+    "type": "Property",
+    "value": 0.35,
+    "unitCode": "MTS"
+  },
+  "activity": {
+    "type": "Property",
+    "value": "grazing"
+  },
+  "healthStatus": {
+    "type": "Property",
+    "value": "normal"
+  },
+  "locatedIn": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:ForestPlot:plot-001"
+  },
+  "lastPositionUpdate": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2025-11-30T12:40:00Z"
+    }
+  }
+}
